@@ -2,8 +2,8 @@
 # 1.1 Préparation du disque
 
 - Ont utilise la commande "cfdisk /dev/sdb" pour faire nos deux partitions de 6G pour DATA et 4G pour le SWAP
-
-(Screen cfdisk)[]
+ 
+![Screen cfdisk](Ressource/Screen_cfdisk.png)
 
 - Ont formate la 1er partition **DATA** en **ext4** avec la commande :
 >	mkfs.ext4 -L DATA /dev/sdb1
@@ -20,7 +20,7 @@
 - Ont peux vérifier les partitions de nos disque avec la commande :
 >	fdisk -l
 
-(Screen fdisk)[]
+![Screen fdisk](Ressource/Screen_fdisk.png)
 
 # 1.2 Montage
 
@@ -30,12 +30,12 @@
 - Ont monte la partition sdb1 sur /mnt/data :
 >	mount -t ext4 /dev/sdb1 /mnt/data
 
-(Screen lsblk2)
+![Screen lsblk2](Ressource/Screen_lsblk2.png)
 
 - Pour montée automatiquement la partition sdb1 au démarrage : ont modifie le fichier /etc/fstab en utilisent l'UUID de la partition trouver avec la commande "blkid"
 
-(Screen blkid)[]
-(Screen fstab)[]
+![Screen blkid](Ressource/Screen_blkid.png)
+![Screen fstab](Ressource/Screen_fstab.png)
 
 
 
