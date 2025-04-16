@@ -10,7 +10,7 @@ fi
 #On fait une boucle FOR pour créé des compte autant de fois qu'il y a d'argument
 for user in "$@"
 do
-    #On verifie si l'utilisateur
+    #On verifie si l'utilisateur existe
     if [ id "$user" &>dev/null ]
     then
         echo "L'utilisateur $user existe déjà"
